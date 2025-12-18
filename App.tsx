@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Section } from './components/Section';
 import { Button } from './components/Button';
@@ -14,6 +13,7 @@ import {
   BookOpen, 
   Award,
   ChevronRight,
+  ChevronDown,
   Star,
   MessageCircle,
   PlayCircle
@@ -21,6 +21,7 @@ import {
 
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,9 +31,58 @@ const App: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const CHECKOUT_LINK = "https://chk.eduzz.com/E0D654A691";
+
+  const handleCheckout = () => {
+    window.open(CHECKOUT_LINK, '_blank');
+  };
+
   const scrollToPricing = () => {
     document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const toggleFaq = (index: number) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
+
+  const faqs = [
+    {
+      question: "Preciso ter experiência ou ser terapeuta para fazer o curso?",
+      answer: "Absolutamente não. O curso foi desenhado para ir do zero ao avançado. Se você nunca segurou um pêndulo na vida, eu vou te ensinar desde como escolher um até como consagrá-lo e usá-lo com segurança."
+    },
+    {
+      question: "Preciso ser médium ou sensitivo para fazer o curso?",
+      answer: "Não. A Mesa Quântica Celestial é uma ferramenta que pode ser aprendida por qualquer pessoa. Você não precisa ver espíritos ou ter dons desenvolvidos previamente. A técnica da radiestesia, aliada à egrégora da mesa, vai te ensinar a fazer a leitura e o tratamento energético, independentemente do seu nível atual de percepção."
+    },
+    {
+      question: "O curso é vinculado a alguma religião?",
+      answer: "Não. A espiritualidade é livre e luz é luz. Trabalhamos com egrégoras de alta vibração, como Arcanjos, Mestres da Fraternidade Branca e Seres Multidimensionais, mas isso não exige vínculo com nenhum dogma religioso. O foco é a conexão com a Fonte e a expansão da consciência."
+    },
+    {
+      question: "Vou receber a Mesa Física em casa?",
+      answer: "Para garantir que o curso seja acessível e imediato, você recebe o arquivo digital em alta resolução da Mesa Quântica Celestial. Você poderá imprimir em qualquer gráfica (ou em casa) e plastificar. Isso agiliza o seu processo de aprendizado e evita custos altos de frete."
+    },
+    {
+      question: "E se eu perder as aulas ao vivo?",
+      answer: "Fique tranquilo(a). Todas as aulas são gravadas e disponibilizadas na nossa plataforma exclusiva de alunos. Você tem acesso vitalício para rever quantas vezes quiser, no seu próprio ritmo."
+    },
+    {
+      question: "Preciso comprar materiais caros?",
+      answer: "Não. A única ferramenta essencial é um pêndulo, que você encontra facilmente em lojas esotéricas ou na internet por valores muito acessíveis. O restante (gráficos e a própria mesa) nós fornecemos os arquivos para impressão."
+    },
+    {
+      question: "Serve para eu me autoaplicar?",
+      answer: "Sim! Este é o primeiro passo. Antes de cuidar do outro, você aprenderá a diagnosticar e limpar a sua própria energia, a da sua casa e a dos seus familiares. É uma ferramenta de autonomia."
+    },
+    {
+      question: "Posso trabalhar profissionalmente com a Mesa?",
+      answer: "Sim. Ao concluir a formação, você estará apto a ser um operador da Mesa Quântica Celestial, podendo realizar atendimentos terapêuticos, limpezas de ambientes e harmonizações para clientes, além de cuidar da sua própria energia e da sua família."
+    },
+    {
+      question: "O curso tem certificado?",
+      answer: "Sim. Ao concluir a formação, você receberá um Certificado de Operador(a) da Mesa Quântica Celestial, habilitando você a trabalhar com a ferramenta se assim desejar."
+    }
+  ];
 
   return (
     <div className="font-sans min-h-screen flex flex-col">
@@ -41,10 +91,10 @@ const App: React.FC = () => {
       <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-3' : 'bg-transparent py-4'} hidden md:block`}>
         <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
           <span className={`font-serif font-bold text-xl ${scrolled ? 'text-celestial-blue' : 'text-white'}`}>
-            Cíntia Camerin
+            Mesa Quântica Celestial by Cíntia Camerin
           </span>
           <Button 
-            onClick={scrollToPricing} 
+            onClick={handleCheckout} 
             variant={scrolled ? 'primary' : 'outline'}
             className="text-sm py-2 px-4"
           >
@@ -57,10 +107,21 @@ const App: React.FC = () => {
       <div className="relative min-h-[90vh] flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2094&auto=format&fit=crop')] bg-cover bg-center bg-no-repeat bg-fixed">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/90 via-celestial-blue/80 to-slate-900/90"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white space-y-8 pt-20">
-          <div className="inline-block bg-white/10 backdrop-blur-sm px-4 py-1 rounded-full border border-white/20 mb-4 animate-fade-in-up">
+          
+          {/* Badge */}
+          <div className="inline-block bg-white/10 backdrop-blur-sm px-4 py-1 rounded-full border border-white/20 mb-6 animate-fade-in-up">
             <span className="text-gold-accent font-semibold uppercase tracking-wider text-sm">Formação 2026</span>
           </div>
           
+          {/* Foto Cintia Camerin (Hero) */}
+          <div className="mb-6 flex justify-center">
+             <img 
+               src="https://cintia.marketsite.com.br/2.jpg" 
+               alt="Cíntia Camerin" 
+               className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border-4 border-white/30 shadow-2xl"
+             />
+          </div>
+
           <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight drop-shadow-lg">
             Torne-se um <span className="text-gold-accent">Operador da Luz</span> e Assuma o Comando da Sua Realidade
           </h1>
@@ -70,7 +131,7 @@ const App: React.FC = () => {
           </p>
           
           <div className="pt-8">
-            <Button onClick={scrollToPricing} className="mx-auto text-xl shadow-gold-accent/20 shadow-2xl animate-pulse">
+            <Button onClick={handleCheckout} className="mx-auto text-xl shadow-gold-accent/20 shadow-2xl animate-pulse">
               QUERO GARANTIR MINHA VAGA NA MESA CELESTIAL
               <ChevronRight className="w-6 h-6" />
             </Button>
@@ -135,7 +196,7 @@ const App: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
                <img 
-                src="https://images.unsplash.com/photo-1600609842388-3e4444585cb1?q=80&w=2066&auto=format&fit=crop"
+                src="https://cintia.marketsite.com.br/3.jpeg"
                 alt="Mesa Quântica Celestial Representação"
                 className="rounded-xl shadow-2xl border-4 border-gold-accent/30 w-full hover:scale-[1.02] transition-transform duration-500"
                />
@@ -255,7 +316,7 @@ const App: React.FC = () => {
              <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
                {/* Replace with Cintia's actual image */}
                <img 
-                 src="https://images.unsplash.com/photo-1544367563-12123d8965cd?q=80&w=2070&auto=format&fit=crop" 
+                 src="https://cintia.marketsite.com.br/1.jpg" 
                  alt="Cíntia Camerin"
                  className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white shadow-xl flex-shrink-0"
                />
@@ -377,7 +438,7 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              <Button onClick={() => alert('Redirecionando para o checkout...')} fullWidth variant="primary" className="text-lg md:text-xl py-5 shadow-emerald-500/20 shadow-xl">
+              <Button onClick={handleCheckout} fullWidth variant="primary" className="text-lg md:text-xl py-5 shadow-emerald-500/20 shadow-xl">
                 SIM! QUERO SER UM OPERADOR
               </Button>
               
@@ -386,6 +447,54 @@ const App: React.FC = () => {
                 <span>Pagamento 100% Seguro</span>
               </div>
             </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* BLOCO: FAQ (Perguntas Frequentes) */}
+      <Section className="bg-white">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl font-bold text-slate-900 mb-4">
+              Perguntas Frequentes
+            </h2>
+            <p className="text-slate-600">
+              Tire suas dúvidas sobre a formação e a metodologia.
+            </p>
+          </div>
+
+          <div className="space-y-4 mb-16">
+            {faqs.map((faq, index) => (
+              <div 
+                key={index} 
+                className="border border-slate-200 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md bg-slate-50"
+              >
+                <button
+                  onClick={() => toggleFaq(index)}
+                  className="w-full flex items-center justify-between p-6 text-left focus:outline-none bg-white"
+                >
+                  <span className="font-bold text-slate-800 text-lg pr-4">
+                    {faq.question}
+                  </span>
+                  <ChevronDown 
+                    className={`w-6 h-6 text-emerald-600 transition-transform duration-300 flex-shrink-0 ${openFaqIndex === index ? 'rotate-180' : ''}`} 
+                  />
+                </button>
+                <div 
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${openFaqIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+                >
+                  <div className="p-6 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 bg-white">
+                    {faq.answer}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-celestial-blue/5 border border-celestial-blue/10 rounded-xl p-8 text-center max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl font-serif text-slate-700 italic leading-relaxed">
+              "Lembre-se: sempre vai existir uma versão sua melhor pronta para aparecer, desde que você pare de fingir ser outra coisa. A Mesa Quântica Celestial é a ferramenta para revelar essa versão. Te espero do lado de cá para darmos esse salto juntos."
+            </p>
           </div>
         </div>
       </Section>
@@ -411,10 +520,15 @@ const App: React.FC = () => {
             
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
               <p>Copyright © 2026 Cíntia Camerin. Todos os direitos reservados.</p>
-              <button className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors">
+              <a 
+                href="https://wa.me/5511931432736?text=Estou%20com%20d%C3%BAvidas%20sobre%20a%20forma%C3%A7%C3%A3o%20da%20C%C3%ADntia%20Camerin"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors"
+              >
                 <MessageCircle className="w-4 h-4" />
                 Dúvidas? Fale no WhatsApp
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -422,7 +536,7 @@ const App: React.FC = () => {
 
       {/* Mobile Sticky CTA */}
       <div className={`fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] md:hidden transition-transform duration-300 z-50 ${scrolled ? 'translate-y-0' : 'translate-y-full'}`}>
-        <Button onClick={scrollToPricing} fullWidth variant="primary" className="text-sm py-3">
+        <Button onClick={handleCheckout} fullWidth variant="primary" className="text-sm py-3">
           QUERO MINHA VAGA AGORA
         </Button>
       </div>
