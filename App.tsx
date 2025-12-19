@@ -253,7 +253,7 @@ const App: React.FC = () => {
             { 
               title: "Fraternidade Branca", 
               sub: "Mestres Ascensos",
-              desc: "A conexão com os Mestres e a sabedoria dos Sete Raios.",
+              desc: "A conexão com os Mestres e a sabedoria dos 12 Raios.",
               color: "border-gold-accent",
               bg: "bg-amber-50",
               icon: <Star className="w-8 h-8 text-gold-accent" />

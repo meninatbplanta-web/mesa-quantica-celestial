@@ -8,12 +8,19 @@ if (!rootElement) {
   throw new Error("Could not find root element to mount to");
 }
 
-// Simple routing based on query parameter ?v=short
-const isShortVersion = window.location.search.includes('v=short');
+// Simple routing based on query parameter
+const searchParams = new URLSearchParams(window.location.search);
+const version = searchParams.get('v');
+
+let ComponentToRender = App;
+
+if (version === 'short') {
+  ComponentToRender = ShortApp;
+}
 
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    {isShortVersion ? <ShortApp /> : <App />}
+    <ComponentToRender />
   </React.StrictMode>
 );
