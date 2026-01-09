@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Section } from './components/Section';
 import { Button } from './components/Button';
-import { 
-  Shield, 
-  Zap, 
-  Users, 
-  Globe, 
-  CheckCircle, 
-  Calendar, 
-  Clock, 
-  Video, 
-  BookOpen, 
+import {
+  Shield,
+  Zap,
+  Users,
+  Globe,
+  CheckCircle,
+  Calendar,
+  Clock,
+  Video,
+  BookOpen,
   Award,
   ChevronRight,
   ChevronDown,
@@ -86,15 +86,15 @@ const App: React.FC = () => {
 
   return (
     <div className="font-sans min-h-screen flex flex-col">
-      
+
       {/* Sticky Top Bar (Desktop) / Bottom Bar (Mobile) handled via fixed positioning */}
       <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-3' : 'bg-transparent py-4'} hidden md:block`}>
         <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
           <span className={`font-serif font-bold text-xl ${scrolled ? 'text-celestial-blue' : 'text-white'}`}>
             Mesa Quântica Celestial by Cíntia Camerin
           </span>
-          <Button 
-            onClick={handleCheckout} 
+          <Button
+            onClick={handleCheckout}
             variant={scrolled ? 'primary' : 'outline'}
             className="text-sm py-2 px-4"
           >
@@ -107,38 +107,38 @@ const App: React.FC = () => {
       <div className="relative min-h-[90vh] flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2094&auto=format&fit=crop')] bg-cover bg-center bg-no-repeat bg-fixed">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/90 via-celestial-blue/80 to-slate-900/90"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white space-y-8 pt-20">
-          
+
           {/* Badge */}
           <div className="inline-block bg-white/10 backdrop-blur-sm px-4 py-1 rounded-full border border-white/20 mb-6 animate-fade-in-up">
             <span className="text-gold-accent font-semibold uppercase tracking-wider text-sm">Curso da Mesa Quântica Celestial</span>
           </div>
-          
+
           {/* Foto Cintia Camerin (Hero) - Aumentada e com efeito de fusão */}
           <div className="mb-8 flex justify-center relative">
-             <div className="relative group">
-                {/* Glow Effect */}
-                <div className="absolute inset-0 bg-celestial-blue/50 blur-[50px] rounded-full scale-110"></div>
-                
-                <img 
-                  src="https://cintia.marketsite.com.br/2.jpg" 
-                  alt="Cíntia Camerin" 
-                  className="w-48 h-48 md:w-72 md:h-72 rounded-full object-cover shadow-2xl relative z-10"
-                  style={{ 
-                    maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)',
-                    WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)'
-                  }}
-                />
-             </div>
+            <div className="relative group">
+              {/* Glow Effect */}
+              <div className="absolute inset-0 bg-celestial-blue/50 blur-[50px] rounded-full scale-110"></div>
+
+              <img
+                src="https://cintia.marketsite.com.br/2.jpg"
+                alt="Cíntia Camerin"
+                className="w-48 h-48 md:w-72 md:h-72 rounded-full object-cover shadow-2xl relative z-10"
+                style={{
+                  maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)'
+                }}
+              />
+            </div>
           </div>
 
           <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight drop-shadow-lg">
             Torne-se um <span className="text-gold-accent">Operador da Luz</span> e Assuma o Comando da Sua Realidade
           </h1>
-          
+
           <p className="text-lg md:text-2xl text-slate-200 font-light max-w-2xl mx-auto leading-relaxed">
             Uma formação inédita e ao vivo com <strong className="text-white">Cíntia Camerin</strong> para você aprender a diagnosticar, limpar e harmonizar sua energia com a ferramenta canalizada diretamente das Egrégoras de Luz.
           </p>
-          
+
           {/* Botão com maior espaçamento inferior */}
           <div className="pt-10 pb-24">
             <Button onClick={handleCheckout} className="mx-auto text-xl shadow-gold-accent/20 shadow-2xl animate-pulse">
@@ -159,7 +159,7 @@ const App: React.FC = () => {
             <p>
               Estamos vivendo um momento único na Transição Planetária. A luz está chegando com força total, trazendo à tona tudo o que estava escondido. A verdade é que muitas vezes culpamos o externo, mas <strong>você é o responsável pela porta que abre.</strong>
             </p>
-            
+
             <div className="bg-red-50 border border-red-100 p-8 rounded-2xl shadow-sm">
               <p className="font-bold text-red-900 text-xl mb-2">
                 Cuidado com o "Obsessor de Si Mesmo"
@@ -176,7 +176,7 @@ const App: React.FC = () => {
       <Section dark className="bg-celestial-blue relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
-        
+
         <div className="relative z-10 text-center mb-16">
           <span className="text-gold-accent font-bold tracking-widest uppercase mb-2 block">A Solução</span>
           <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6">A Mesa Quântica Celestial</h2>
@@ -186,37 +186,37 @@ const App: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-               <img 
-                src="https://cintia.marketsite.com.br/3.jpeg"
-                alt="Mesa Quântica Celestial Representação"
-                className="rounded-xl shadow-2xl border-4 border-gold-accent/30 w-full hover:scale-[1.02] transition-transform duration-500"
-               />
-               <p className="text-center text-sm text-blue-200 mt-2 italic">*Imagem ilustrativa. A Mesa oficial será entregue no curso.</p>
-            </div>
-            
-            <div className="space-y-8 order-1 md:order-2">
-              <p className="text-lg text-blue-50">
-                Esta não é apenas uma mesa radiônica comum. É uma <strong>tecnologia espiritual</strong> que eu canalizei diretamente através do contato com seres multidimensionais e egrégoras de alta vibração.
-              </p>
-              
-              <div className="space-y-4">
-                {[
-                  { title: "Diagnosticar", desc: "Entenda exatamente onde está o desequilíbrio (chakras, ambiente, saúde, prosperidade).", icon: <Star className="w-6 h-6 text-gold-accent"/> },
-                  { title: "Tratar e Harmonizar", desc: "Envie frequências de cura para 'resetar' a saúde perfeita e abrir caminhos.", icon: <Zap className="w-6 h-6 text-emerald-400"/> },
-                  { title: "Proteger", desc: "Ative escudos de proteção legítimos (como o Pentáculo Hebraico) para sua casa, carro e família.", icon: <Shield className="w-6 h-6 text-blue-300"/> },
-                  { title: "Expandir", desc: "Conecte-se com egrégoras de luz sem medo e com segurança.", icon: <Globe className="w-6 h-6 text-purple-300"/> }
-                ].map((item, idx) => (
-                  <div key={idx} className="flex gap-4 items-start bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-                    <div className="mt-1">{item.icon}</div>
-                    <div>
-                      <h4 className="font-bold text-white text-lg">{item.title}</h4>
-                      <p className="text-blue-100">{item.desc}</p>
-                    </div>
+          <div className="order-2 md:order-1">
+            <img
+              src="https://cintia.marketsite.com.br/3.jpeg"
+              alt="Mesa Quântica Celestial Representação"
+              className="rounded-xl shadow-2xl border-4 border-gold-accent/30 w-full hover:scale-[1.02] transition-transform duration-500"
+            />
+            <p className="text-center text-sm text-blue-200 mt-2 italic">*Imagem ilustrativa. A Mesa oficial será entregue no curso.</p>
+          </div>
+
+          <div className="space-y-8 order-1 md:order-2">
+            <p className="text-lg text-blue-50">
+              Esta não é apenas uma mesa radiônica comum. É uma <strong>tecnologia espiritual</strong> que eu canalizei diretamente através do contato com seres multidimensionais e egrégoras de alta vibração.
+            </p>
+
+            <div className="space-y-4">
+              {[
+                { title: "Diagnosticar", desc: "Entenda exatamente onde está o desequilíbrio (chakras, ambiente, saúde, prosperidade).", icon: <Star className="w-6 h-6 text-gold-accent" /> },
+                { title: "Tratar e Harmonizar", desc: "Envie frequências de cura para 'resetar' a saúde perfeita e abrir caminhos.", icon: <Zap className="w-6 h-6 text-emerald-400" /> },
+                { title: "Proteger", desc: "Ative escudos de proteção legítimos (como o Pentáculo Hebraico) para sua casa, carro e família.", icon: <Shield className="w-6 h-6 text-blue-300" /> },
+                { title: "Expandir", desc: "Conecte-se com egrégoras de luz sem medo e com segurança.", icon: <Globe className="w-6 h-6 text-purple-300" /> }
+              ].map((item, idx) => (
+                <div key={idx} className="flex gap-4 items-start bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+                  <div className="mt-1">{item.icon}</div>
+                  <div>
+                    <h4 className="font-bold text-white text-lg">{item.title}</h4>
+                    <p className="text-blue-100">{item.desc}</p>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
+          </div>
         </div>
       </Section>
 
@@ -233,8 +233,8 @@ const App: React.FC = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { 
-              title: "Arcanjo Miguel", 
+            {
+              title: "Arcanjo Miguel",
               sub: "Comando Micaélico",
               desc: "Para proteção absoluta, corte de laços negativos e a força da fé.",
               color: "border-blue-700",
@@ -242,24 +242,24 @@ const App: React.FC = () => {
               icon: <Shield className="w-8 h-8 text-blue-700" />,
               featured: true
             },
-            { 
-              title: "Hierarquias Angelicais", 
+            {
+              title: "Hierarquias Angelicais",
               sub: "Anjos e Arcangelinas",
               desc: "A doçura e a força das legiões celestiais para amparo e elevação espiritual.",
               color: "border-rose-400",
               bg: "bg-rose-50",
               icon: <Users className="w-8 h-8 text-rose-400" />
             },
-            { 
-              title: "Fraternidade Branca", 
+            {
+              title: "Fraternidade Branca",
               sub: "Mestres Ascensos",
               desc: "A conexão com os Mestres e a sabedoria dos 12 Raios.",
               color: "border-gold-accent",
               bg: "bg-amber-50",
               icon: <Star className="w-8 h-8 text-gold-accent" />
             },
-            { 
-              title: "Federação Galáctica da Luz", 
+            {
+              title: "Federação Galáctica da Luz",
               sub: "Suporte Benevolente",
               desc: "O suporte de seres que auxiliam na transição da Terra.",
               color: "border-purple-500",
@@ -268,11 +268,11 @@ const App: React.FC = () => {
             },
           ].map((card, idx) => (
             <div key={idx} className={`${card.bg} p-6 rounded-xl shadow-lg border-t-4 ${card.color} hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden group ${card.featured ? 'shadow-blue-900/10 ring-1 ring-blue-200 md:-translate-y-2' : ''}`}>
-              
+
               {/* Background Icon for Featured Cards */}
               {card.featured && (
                 <div className="absolute -right-8 -bottom-8 opacity-5 transition-transform duration-500 group-hover:scale-110 group-hover:opacity-10 pointer-events-none">
-                   <Shield className="w-48 h-48 text-blue-900" />
+                  <Shield className="w-48 h-48 text-blue-900" />
                 </div>
               )}
 
@@ -317,25 +317,25 @@ const App: React.FC = () => {
 
           {/* Mentora Bio */}
           <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 relative">
-             <div className="absolute -top-6 -right-6 w-24 h-24 bg-gold-accent/20 rounded-full blur-xl"></div>
-             <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
-               {/* Foto da Bio Aumentada - AJUSTADA AQUI */}
-               <img 
-                 src="https://cintia.marketsite.com.br/1.jpg" 
-                 alt="Cíntia Camerin"
-                 className="w-56 h-56 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-xl flex-shrink-0"
-               />
-               <div>
-                 <h3 className="font-serif text-2xl font-bold text-slate-900">Cíntia Camerin</h3>
-                 <p className="text-emerald-600 font-medium mb-3">Sensitiva, Terapeuta e Canalizadora</p>
-                 <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                   Minha missão é desmistificar a espiritualidade. Eu converso com seres multidimensionais, mas acredito que a espiritualidade verdadeira se prova no boleto pago, na paciência com a família e na ética.
-                 </p>
-                 <p className="text-slate-700 text-sm font-semibold italic">
-                   "Não sou guru, sou apenas alguém que decidiu parar de fingir ser outra coisa."
-                 </p>
-               </div>
-             </div>
+            <div className="absolute -top-6 -right-6 w-24 h-24 bg-gold-accent/20 rounded-full blur-xl"></div>
+            <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
+              {/* Foto da Bio Aumentada - AJUSTADA AQUI */}
+              <img
+                src="https://cintia.marketsite.com.br/1.jpg"
+                alt="Cíntia Camerin"
+                className="w-56 h-56 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-xl flex-shrink-0"
+              />
+              <div>
+                <h3 className="font-serif text-2xl font-bold text-slate-900">Cíntia Camerin</h3>
+                <p className="text-emerald-600 font-medium mb-3">Sensitiva, Terapeuta e Canalizadora</p>
+                <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                  Minha missão é desmistificar a espiritualidade. Eu converso com seres multidimensionais, mas acredito que a espiritualidade verdadeira se prova no boleto pago, na paciência com a família e na ética.
+                </p>
+                <p className="text-slate-700 text-sm font-semibold italic">
+                  "Não sou guru, sou apenas alguém que decidiu parar de fingir ser outra coisa."
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </Section>
@@ -348,49 +348,49 @@ const App: React.FC = () => {
             <p className="opacity-90 mt-2">Formação 100% Online e Ao Vivo pelo Zoom</p>
           </div>
           <div className="p-8 md:p-12">
-             <div className="grid md:grid-cols-2 gap-8 mb-8">
-               <div className="space-y-4">
-                 <h3 className="flex items-center gap-2 font-bold text-slate-800 text-xl">
-                   <Calendar className="text-emerald-600" /> Datas dos Encontros
-                 </h3>
-                 <ul className="space-y-3 text-slate-600">
-                   <li className="flex justify-between border-b pb-2">
-                     <span>Janeiro 2026</span>
-                     <span className="font-bold text-slate-900">Dias 22 e 29</span>
-                   </li>
-                   <li className="flex justify-between border-b pb-2">
-                     <span>Fevereiro 2026</span>
-                     <span className="font-bold text-slate-900">Dias 05, 19 e 26</span>
-                   </li>
-                   <li className="text-sm italic text-slate-500 pt-2">Sempre às quartas-feiras</li>
-                 </ul>
-               </div>
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="space-y-4">
+                <h3 className="flex items-center gap-2 font-bold text-slate-800 text-xl">
+                  <Calendar className="text-emerald-600" /> Datas dos Encontros
+                </h3>
+                <ul className="space-y-3 text-slate-600">
+                  <li className="flex justify-between border-b pb-2">
+                    <span>Janeiro 2026</span>
+                    <span className="font-bold text-slate-900">Dias 22 e 29</span>
+                  </li>
+                  <li className="flex justify-between border-b pb-2">
+                    <span>Fevereiro 2026</span>
+                    <span className="font-bold text-slate-900">Dias 05, 19 e 26</span>
+                  </li>
+                  <li className="text-sm italic text-slate-500 pt-2">Sempre às quintas-feiras</li>
+                </ul>
+              </div>
 
-               <div className="space-y-6">
-                 <div>
-                    <h3 className="flex items-center gap-2 font-bold text-slate-800 text-xl mb-2">
-                      <Clock className="text-emerald-600" /> Horário
-                    </h3>
-                    <p className="text-slate-600">19h30 às 22h00 (Horário de Brasília)</p>
-                 </div>
-                 <div>
-                    <h3 className="flex items-center gap-2 font-bold text-slate-800 text-xl mb-2">
-                      <Video className="text-emerald-600" /> Acesso
-                    </h3>
-                    <p className="text-slate-600">Link exclusivo no Zoom + Gravações na plataforma</p>
-                 </div>
-               </div>
-             </div>
-             
-             <div className="bg-amber-50 border border-amber-200 p-4 rounded-lg flex gap-4 items-start">
-               <div className="bg-amber-100 p-2 rounded-full">
-                 <PlayCircle className="w-5 h-5 text-amber-600"/>
-               </div>
-               <div>
-                 <h4 className="font-bold text-amber-900">Perdeu uma aula?</h4>
-                 <p className="text-sm text-amber-800">Fique tranquilo(a). Todo o conteúdo ficará gravado. Você poderá rever quantas vezes quiser.</p>
-               </div>
-             </div>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="flex items-center gap-2 font-bold text-slate-800 text-xl mb-2">
+                    <Clock className="text-emerald-600" /> Horário
+                  </h3>
+                  <p className="text-slate-600">19h30 às 22h00 (Horário de Brasília)</p>
+                </div>
+                <div>
+                  <h3 className="flex items-center gap-2 font-bold text-slate-800 text-xl mb-2">
+                    <Video className="text-emerald-600" /> Acesso
+                  </h3>
+                  <p className="text-slate-600">Link exclusivo no Zoom + Gravações na plataforma</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-amber-50 border border-amber-200 p-4 rounded-lg flex gap-4 items-start">
+              <div className="bg-amber-100 p-2 rounded-full">
+                <PlayCircle className="w-5 h-5 text-amber-600" />
+              </div>
+              <div>
+                <h4 className="font-bold text-amber-900">Perdeu uma aula?</h4>
+                <p className="text-sm text-amber-800">Fique tranquilo(a). Todo o conteúdo ficará gravado. Você poderá rever quantas vezes quiser.</p>
+              </div>
+            </div>
           </div>
         </div>
       </Section>
@@ -412,23 +412,23 @@ const App: React.FC = () => {
             <div className="bg-gold-accent p-3 text-center">
               <span className="font-bold text-slate-900 uppercase tracking-widest text-sm">Vagas Limitadas</span>
             </div>
-            
+
             <div className="p-8 md:p-12">
               <div className="flex flex-col md:flex-row gap-8 justify-center mb-8 text-left max-w-lg mx-auto">
-                 <ul className="space-y-4">
-                   {[
-                     "5 Aulas Ao Vivo com Cíntia Camerin",
-                     "Acesso vitalício às gravações",
-                     "Arquivo da Mesa Quântica Celestial (Print)",
-                     "Apostila com Símbolos e Comandos",
-                     "Certificado de Operador(a)"
-                   ].map((item, i) => (
-                     <li key={i} className="flex items-center gap-3">
-                       <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
-                       <span className="font-medium">{item}</span>
-                     </li>
-                   ))}
-                 </ul>
+                <ul className="space-y-4">
+                  {[
+                    "5 Aulas Ao Vivo com Cíntia Camerin",
+                    "Acesso vitalício às gravações",
+                    "Arquivo da Mesa Quântica Celestial (Print)",
+                    "Apostila com Símbolos e Comandos",
+                    "Certificado de Operador(a)"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                      <span className="font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               <div className="space-y-2 mb-8 border-t border-slate-100 pt-8">
@@ -446,7 +446,7 @@ const App: React.FC = () => {
               <Button onClick={handleCheckout} fullWidth variant="primary" className="text-lg md:text-xl py-5 shadow-emerald-500/20 shadow-xl">
                 SIM! QUERO SER UM OPERADOR
               </Button>
-              
+
               <div className="mt-6 flex items-center justify-center gap-2 text-sm text-slate-500">
                 <Shield className="w-4 h-4" />
                 <span>Pagamento 100% Seguro</span>
@@ -470,8 +470,8 @@ const App: React.FC = () => {
 
           <div className="space-y-3 mb-12">
             {faqs.map((faq, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="border border-slate-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-slate-400 bg-white"
               >
                 <button
@@ -481,11 +481,11 @@ const App: React.FC = () => {
                   <span className="font-medium text-slate-800 text-base pr-4">
                     {faq.question}
                   </span>
-                  <ChevronDown 
-                    className={`w-4 h-4 text-emerald-600 transition-transform duration-300 flex-shrink-0 opacity-70 ${openFaqIndex === index ? 'rotate-180' : ''}`} 
+                  <ChevronDown
+                    className={`w-4 h-4 text-emerald-600 transition-transform duration-300 flex-shrink-0 opacity-70 ${openFaqIndex === index ? 'rotate-180' : ''}`}
                   />
                 </button>
-                <div 
+                <div
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${openFaqIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
                 >
                   <div className="p-4 pt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-200 bg-white">
@@ -507,7 +507,7 @@ const App: React.FC = () => {
       {/* BLOCO 9: GARANTIA & FOOTER */}
       <footer className="bg-slate-900 text-slate-400 pt-16 pb-32 md:pb-8 border-t border-slate-800">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          
+
           <div className="mb-16">
             <div className="inline-block p-4 rounded-full bg-slate-800 mb-6">
               <Shield className="w-12 h-12 text-gold-accent" />
@@ -521,7 +521,7 @@ const App: React.FC = () => {
           <div className="border-t border-slate-800 pt-8 space-y-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
               <p>Copyright © 2026 Cíntia Camerin. Todos os direitos reservados.</p>
-              <a 
+              <a
                 href="https://wa.me/5511931432736?text=Estou%20com%20d%C3%BAvidas%20sobre%20a%20forma%C3%A7%C3%A3o%20da%20C%C3%ADntia%20Camerin"
                 target="_blank"
                 rel="noopener noreferrer"
