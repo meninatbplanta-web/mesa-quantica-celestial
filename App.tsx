@@ -31,7 +31,7 @@ const App: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const CHECKOUT_LINK = "https://chk.eduzz.com/E0D654A691";
+  const CHECKOUT_LINK = "https://wa.me/5511931432736?text=Quero%20ser%20avisado(a)%20sobre%20a%20pr%C3%B3xima%20turma%20da%20C%C3%ADntia%20Camerin";
 
   const handleCheckout = () => {
     window.open(CHECKOUT_LINK, '_blank');
@@ -96,9 +96,9 @@ const App: React.FC = () => {
           <Button
             onClick={handleCheckout}
             variant={scrolled ? 'primary' : 'outline'}
-            className="text-sm py-2 px-4"
+            className="text-sm py-2 px-4 uppercase"
           >
-            Garantir Minha Vaga
+            Quero ser avisado
           </Button>
         </div>
       </div>
@@ -142,7 +142,7 @@ const App: React.FC = () => {
           {/* Botão com maior espaçamento inferior */}
           <div className="pt-10 pb-24">
             <Button onClick={handleCheckout} className="mx-auto text-xl shadow-gold-accent/20 shadow-2xl animate-pulse">
-              QUERO GARANTIR MINHA VAGA NA MESA CELESTIAL
+              QUERO SER AVISADO DA PRÓXIMA TURMA
               <ChevronRight className="w-6 h-6" />
             </Button>
           </div>
@@ -444,7 +444,7 @@ const App: React.FC = () => {
               </div>
 
               <Button onClick={handleCheckout} fullWidth variant="primary" className="text-lg md:text-xl py-5 shadow-emerald-500/20 shadow-xl">
-                SIM! QUERO SER UM OPERADOR
+                QUERO SER AVISADO DA PRÓXIMA TURMA
               </Button>
 
               <div className="mt-6 flex items-center justify-center gap-2 text-sm text-slate-500">
@@ -538,7 +538,7 @@ const App: React.FC = () => {
       {/* Mobile Sticky CTA */}
       <div className={`fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] md:hidden transition-transform duration-300 z-50 ${scrolled ? 'translate-y-0' : 'translate-y-full'}`}>
         <Button onClick={handleCheckout} fullWidth variant="primary" className="text-sm py-3">
-          QUERO MINHA VAGA AGORA
+          QUERO SER AVISADO DA PRÓXIMA TURMA
         </Button>
       </div>
 
