@@ -5,7 +5,7 @@ const App: React.FC = () => {
   const links = [
     {
       title: "Formação Mesa Quântica Celestial",
-      url: "/mesa-quantica",
+      url: "/mesa-quantica-espera",
       icon: <Sparkles className="w-6 h-6" />,
       featured: true
     },

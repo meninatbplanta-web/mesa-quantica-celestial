@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import MesaQuantica from './MesaQuantica';
+import MesaQuanticaEspera from './MesaQuanticaEspera';
 import DefesaEnergetica from './DefesaEnergetica';
 import ShortApp from './ShortApp';
 import ThankYouPage from './ThankYouPage';
@@ -23,6 +24,8 @@ if (path === '/obrigado' || path === '/obrigado.html' || version === 'obrigado')
   ComponentToRender = ThankYouPage;
 } else if (path === '/mesa-quantica' || path === '/mesa-quantica.html' || version === 'mesa-quantica') {
   ComponentToRender = MesaQuantica;
+} else if (path === '/mesa-quantica-espera' || path === '/mesa-quantica-espera.html' || version === 'mesa-quantica-espera') {
+  ComponentToRender = MesaQuanticaEspera;
 } else if (path === '/defesa-energetica' || path === '/defesa-energetica.html' || version === 'defesa-energetica') {
   ComponentToRender = DefesaEnergetica;
 } else if (version === 'short') {
