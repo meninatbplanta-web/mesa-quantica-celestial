@@ -72,6 +72,8 @@ const App: React.FC = () => {
             <a 
               key={index} 
               href={link.url}
+              target={link.url.startsWith('http') ? '_blank' : '_self'}
+              rel={link.url.startsWith('http') ? 'noopener noreferrer' : undefined}
               className={`w-full group flex items-center p-4 md:p-5 rounded-2xl backdrop-blur-md border transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl ${
                 link.featured 
                   ? 'bg-gold-accent/95 border-gold-accent text-slate-900 hover:bg-gold-accent hover:shadow-gold-accent/30 font-bold' 
