@@ -31,7 +31,7 @@ const App: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const CHECKOUT_LINK = "https://wa.me/5511931432736?text=Quero%20ser%20avisado(a)%20sobre%20a%20pr%C3%B3xima%20turma%20da%20C%C3%ADntia%20Camerin";
+  const CHECKOUT_LINK = "https://chk.eduzz.com/nxcq7hh2";
 
   const handleCheckout = () => {
     window.open(CHECKOUT_LINK, '_blank');
@@ -98,7 +98,7 @@ const App: React.FC = () => {
             variant={scrolled ? 'primary' : 'outline'}
             className="text-sm py-2 px-4 uppercase"
           >
-            Quero ser avisado
+            Quero me inscrever
           </Button>
         </div>
       </div>
@@ -142,7 +142,7 @@ const App: React.FC = () => {
           {/* Botão com maior espaçamento inferior */}
           <div className="pt-10 pb-24">
             <Button onClick={handleCheckout} className="mx-auto text-xl shadow-gold-accent/20 shadow-2xl animate-pulse">
-              QUERO SER AVISADO DA PRÓXIMA TURMA
+              QUERO ME INSCREVER AGORA
               <ChevronRight className="w-6 h-6" />
             </Button>
           </div>
@@ -355,12 +355,12 @@ const App: React.FC = () => {
                 </h3>
                 <ul className="space-y-3 text-slate-600">
                   <li className="flex justify-between border-b pb-2">
-                    <span>Janeiro 2026</span>
-                    <span className="font-bold text-slate-900">Dias 22 e 29</span>
+                    <span>Junho 2026</span>
+                    <span className="font-bold text-slate-900">Dias 11 e 18</span>
                   </li>
                   <li className="flex justify-between border-b pb-2">
-                    <span>Fevereiro 2026</span>
-                    <span className="font-bold text-slate-900">Dias 05, 19 e 26</span>
+                    <span>Julho 2026</span>
+                    <span className="font-bold text-slate-900">Dias 02, 09 e 16</span>
                   </li>
                   <li className="text-sm italic text-slate-500 pt-2">Sempre às quintas-feiras</li>
                 </ul>
@@ -444,7 +444,7 @@ const App: React.FC = () => {
               </div>
 
               <Button onClick={handleCheckout} fullWidth variant="primary" className="text-lg md:text-xl py-5 shadow-emerald-500/20 shadow-xl">
-                QUERO SER AVISADO DA PRÓXIMA TURMA
+                QUERO ME INSCREVER AGORA
               </Button>
 
               <div className="mt-6 flex items-center justify-center gap-2 text-sm text-slate-500">
@@ -538,7 +538,7 @@ const App: React.FC = () => {
       {/* Mobile Sticky CTA */}
       <div className={`fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] md:hidden transition-transform duration-300 z-50 ${scrolled ? 'translate-y-0' : 'translate-y-full'}`}>
         <Button onClick={handleCheckout} fullWidth variant="primary" className="text-sm py-3">
-          QUERO SER AVISADO DA PRÓXIMA TURMA
+          QUERO ME INSCREVER AGORA
         </Button>
       </div>
 
