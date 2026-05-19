@@ -437,9 +437,9 @@ const App: React.FC = () => {
                   <span className="text-lg text-slate-600 font-medium">Por apenas</span>
                   <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-emerald-600">
                     <span className="text-2xl md:text-3xl font-bold">12x de</span>
-                    <span className="text-4xl md:text-6xl font-bold tracking-tight">R$ 206,54</span>
+                    <span className="text-4xl md:text-6xl font-bold tracking-tight">R$ 258,25</span>
                   </div>
-                  <p className="text-slate-500 text-sm mt-2">ou R$ 1.997,00 à vista</p>
+                  <p className="text-slate-500 text-sm mt-2">ou R$ 2.497,00 à vista</p>
                 </div>
               </div>
 

@@ -138,8 +138,8 @@ const ShortApp: React.FC = () => {
           
           <div className="bg-white text-slate-900 p-6 rounded-2xl shadow-2xl mb-6">
             <p className="text-slate-500 text-sm line-through mb-1">De R$ 2.997,00</p>
-            <div className="text-3xl font-bold text-emerald-600 mb-1">12x R$ 206,54</div>
-            <p className="text-xs text-slate-500 mb-6">ou R$ 1.997,00 à vista</p>
+            <div className="text-3xl font-bold text-emerald-600 mb-1">12x de R$ 258,25</div>
+            <p className="text-xs text-slate-500 mb-6">ou R$ 2.497,00 à vista</p>
             
             <Button onClick={handleCheckout} fullWidth>
               GARANTIR MINHA VAGA
