@@ -1,0 +1,23 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "query", "key": "v", "value": "(mesa-quantica|mesa-quantica-espera|short)" }],
+      "destination": "https://cintiacamerin.com/mesa-quantica/",
+      "permanent": false
+    },
+    {
+      "source": "/index.html",
+      "has": [{ "type": "query", "key": "v", "value": "(mesa-quantica|mesa-quantica-espera|short)" }],
+      "destination": "https://cintiacamerin.com/mesa-quantica/",
+      "permanent": false
+    },
+    { "source": "/mesa-quantica", "destination": "https://cintiacamerin.com/mesa-quantica/", "permanent": false },
+    { "source": "/mesa-quantica/", "destination": "https://cintiacamerin.com/mesa-quantica/", "permanent": false },
+    { "source": "/mesa-quantica.html", "destination": "https://cintiacamerin.com/mesa-quantica/", "permanent": false },
+    { "source": "/mesa-quantica-espera", "destination": "https://cintiacamerin.com/mesa-quantica/", "permanent": false },
+    { "source": "/mesa-quantica-espera/", "destination": "https://cintiacamerin.com/mesa-quantica/", "permanent": false },
+    { "source": "/mesa-quantica-espera.html", "destination": "https://cintiacamerin.com/mesa-quantica/", "permanent": false }
+  ]
+}
